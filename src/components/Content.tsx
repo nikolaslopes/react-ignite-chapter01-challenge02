@@ -12,6 +12,7 @@ export function Content({ selectedGenreId, selectedGenre }: IContent) {
       .get<IMovie[]>(`movies/?Genre_id=${selectedGenreId}`)
       .then((response) => {
         setMovies(response.data)
+        console.log(response.data)
       })
   }, [selectedGenreId])
 
