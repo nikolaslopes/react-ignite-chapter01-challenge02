@@ -98,8 +98,8 @@ export function App() {
                 key={movie.imdbID}
                 title={movie.Title}
                 poster={movie.Poster}
-                runtime={movie.Runtime}
                 rating={movie.Ratings[0].Value}
+                runtime={movie.Runtime}
               />
             ))}
           </div>
