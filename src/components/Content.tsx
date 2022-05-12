@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { IContent } from '../interfaces/IContent'
 import { IMovie } from '../interfaces/IMovie'
 import { api } from '../services/api'
+import { Header } from './Header'
 import { MovieCard } from './MovieCard'
 
 export function Content({ selectedGenreId, selectedGenre }: IContent) {
@@ -17,11 +18,7 @@ export function Content({ selectedGenreId, selectedGenre }: IContent) {
 
   return (
     <div className="container">
-      <header>
-        <span className="category">
-          Categoria:<span> {selectedGenre.title}</span>
-        </span>
-      </header>
+      <Header title={selectedGenre.title} />
 
       <main>
         <div className="movies-list">
