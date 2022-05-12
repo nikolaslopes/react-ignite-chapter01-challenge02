@@ -10,7 +10,6 @@ import { IGenreResponse } from './interfaces/IGenderResponse'
 
 export function App() {
   const [selectedGenreId, setSelectedGenreId] = useState(1)
-
   const [selectedGenre, setSelectedGenre] = useState<IGenreResponse>(
     {} as IGenreResponse
   )
@@ -21,7 +20,7 @@ export function App() {
     })
   }, [selectedGenreId])
 
-  function handleClickButton(id: number) {
+  function handleClickButtonToChangeGenreId(id: number) {
     setSelectedGenreId(id)
   }
 
@@ -29,7 +28,7 @@ export function App() {
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       <SideBar
         selectedGenreId={selectedGenreId}
-        handleClickButton={handleClickButton}
+        handleClickButton={handleClickButtonToChangeGenreId}
       />
       <Content
         selectedGenreId={selectedGenreId}

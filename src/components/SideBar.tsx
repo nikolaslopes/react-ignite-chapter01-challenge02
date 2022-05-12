@@ -10,8 +10,6 @@ export function SideBar({ selectedGenreId, handleClickButton }: ISidebar) {
   useEffect(() => {
     api.get<IGenreResponse[]>('genres').then((response) => {
       setGenres(response.data)
-
-      console.log(response.data)
     })
   }, [])
 
